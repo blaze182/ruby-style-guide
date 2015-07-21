@@ -1,6 +1,6 @@
 # Prelude
 
-> Role models are important. <br>
+> Role models are important. <br/>
 > -- Officer Alex J. Murphy / RoboCop
 
 One thing has always bothered me as a Ruby developer - Python developers have a
@@ -98,7 +98,7 @@ Translations of the guide are available in the following languages:
 
 > Nearly everybody is convinced that every style but their own is
 > ugly and unreadable. Leave out the "but their own" and they're
-> probably right... <br>
+> probably right... <br/>
 > -- Jerry Coffin (on indentation)
 
 * <a name="utf-8"></a>
@@ -268,15 +268,15 @@ Translations of the guide are available in the following languages:
   No space inside range literals.
 <!-- <sup>[[link](#no-space-inside-range-literals)]</sup> -->
 
-    ```Ruby
-    # bad
-    1 .. 3
-    'a' ... 'z'
+  ```Ruby
+  # bad
+  1 .. 3
+  'a' ... 'z'
 
-    # good
-    1..3
-    'a'...'z'
-    ```
+  # good
+  1..3
+  'a'...'z'
+  ```
 
 * <a name="indent-when-to-case"></a>
   Indent `when` as deep as `case`. I know that many would disagree
@@ -613,27 +613,27 @@ Translations of the guide are available in the following languages:
     parentheses when the method doesn't accept any parameters.
 <!-- <sup>[[link](#method-parens)]</sup> -->
 
-   ```Ruby
-   # bad
-   def some_method()
-     # body omitted
-   end
+  ```Ruby
+  # bad
+  def some_method()
+   # body omitted
+  end
 
-   # good
-   def some_method
-     # body omitted
-   end
+  # good
+  def some_method
+   # body omitted
+  end
 
-   # bad
-   def some_method_with_parameters param1, param2
-     # body omitted
-   end
+  # bad
+  def some_method_with_parameters param1, param2
+   # body omitted
+  end
 
-   # good
-   def some_method_with_parameters(param1, param2)
-     # body omitted
-   end
-   ```
+  # good
+  def some_method_with_parameters(param1, param2)
+   # body omitted
+  end
+  ```
 
 * <a name="parallel-assignment"></a>
     Avoid the use of parallel assignment for defining variables. Parallel
@@ -1027,21 +1027,21 @@ condition](#safe-assignment-in-condition).
   Use `Kernel#loop` instead of `while/until` when you need an infinite loop.
 <!-- <sup>[[link](#infinite-loop)]</sup> -->
 
-    ```ruby
-    # bad
-    while true
-      do_something
-    end
+  ```ruby
+  # bad
+  while true
+    do_something
+  end
 
-    until false
-      do_something
-    end
+  until false
+    do_something
+  end
 
-    # good
-    loop do
-      do_something
-    end
-    ```
+  # good
+  loop do
+    do_something
+  end
+  ```
 
 * <a name="loop-with-break"></a>
   Use `Kernel#loop` with `break` rather than `begin/end/until` or
@@ -1718,23 +1718,22 @@ no parameters.
   ```
 
 * <a name="no-non-nil-checks"></a>
-  Don't do explicit non-`nil` checks unless you're dealing with boolean
-  values.
+  Don't do explicit non-`nil` checks unless you're dealing with boolean values.
 <!-- <sup>[[link](#no-non-nil-checks)]</sup> -->
 
-    ```ruby
-    # bad
-    do_something if !something.nil?
-    do_something if something != nil
+  ```ruby
+  # bad
+  do_something if !something.nil?
+  do_something if something != nil
 
-    # good
-    do_something if something
+  # good
+  do_something if something
 
-    # good - dealing with a boolean
-    def value_set?
-      !@some_boolean.nil?
-    end
-    ```
+  # good - dealing with a boolean
+  def value_set?
+    !@some_boolean.nil?
+  end
+  ```
 
 * <a name="no-BEGIN-blocks"></a>
   Avoid the use of `BEGIN` blocks.
@@ -1861,7 +1860,7 @@ no parameters.
 ## Naming
 
 > The only real difficulties in programming are cache invalidation and
-> naming things. <br>
+> naming things. <br/>
 > -- Phil Karlton
 
 * <a name="english-identifiers"></a>
@@ -2050,7 +2049,7 @@ no parameters.
 > Good code is its own best documentation. As you're about to add a
 > comment, ask yourself, "How can I improve the code so that this
 > comment isn't needed?" Improve the code and then document it to make
-> it even clearer. <br>
+> it even clearer. <br/>
 > -- Steve McConnell
 
 * <a name="no-comments"></a>
@@ -2085,7 +2084,7 @@ no parameters.
   comment at all.
 <!-- <sup>[[link](#comment-upkeep)]</sup> -->
 
-> Good code is like a good joke - it needs no explanation. <br>
+> Good code is like a good joke - it needs no explanation. <br/>
 > -- Russ Olsen
 
 * <a name="refactor-dont-comment"></a>
@@ -3284,18 +3283,18 @@ resource cleanup when possible.
   Don't use `String#gsub` in scenarios in which you can use a faster more specialized alternative.
 <!-- <sup>[[link](#dont-abuse-gsub)]</sup> -->
 
-    ```Ruby
-    url = 'http://example.com'
-    str = 'lisp-case-rules'
+  ```Ruby
+  url = 'http://example.com'
+  str = 'lisp-case-rules'
 
-    # bad
-    url.gsub("http://", "https://")
-    str.gsub("-", "_")
+  # bad
+  url.gsub("http://", "https://")
+  str.gsub("-", "_")
 
-    # good
-    url.sub("http://", "https://")
-    str.tr("-", "_")
-    ```
+  # good
+  url.sub("http://", "https://")
+  str.tr("-", "_")
+  ```
 
 * <a name="heredocs"></a>
   When using heredocs for multi-line strings keep in mind the fact that they
@@ -3316,7 +3315,7 @@ resource cleanup when possible.
 ## Regular Expressions
 
 > Some people, when confronted with a problem, think
-> "I know, I'll use regular expressions." Now they have two problems.<br>
+> "I know, I'll use regular expressions." Now they have two problems.<br/>
 > -- Jamie Zawinski
 
 * <a name="no-regexp-for-plaintext"></a>
@@ -3720,7 +3719,7 @@ your friends and colleagues. Every comment, suggestion or opinion we
 get makes the guide just a little bit better. And we want to have the
 best possible guide, don't we?
 
-Cheers,<br>
+Cheers,<br/>
 [Bozhidar](https://twitter.com/bbatsov)
 
 [PEP-8]: http://www.python.org/dev/peps/pep-0008/
